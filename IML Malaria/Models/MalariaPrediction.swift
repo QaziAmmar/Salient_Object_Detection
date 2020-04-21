@@ -7,3 +7,30 @@
 //
 
 import Foundation
+
+struct MalariaPrediction : Codable {
+    
+    let data : ModelScore?
+    
+    enum CodingKeys: String, CodingKey {
+        case data = "data"
+    }
+    
+}
+
+
+struct ModelScore : Codable {
+    
+    let prediction : String?
+    let confidence : Double?
+
+    enum CodingKeys: String, CodingKey {
+
+        case prediction = "prediction"
+        case confidence = "confidence"
+    }
+}
+
+
+
+

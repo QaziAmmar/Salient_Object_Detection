@@ -1,0 +1,6 @@
+module Pods_IML_Malaria {
+  umbrella header "Pods-IML Malaria-umbrella.h"
+
+  export *
+  module * { export * }
+}

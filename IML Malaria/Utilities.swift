@@ -9,7 +9,6 @@
 import UIKit
 import CommonCrypto
 import CoreLocation
-import SwiftJWT
 import Alamofire
 
 class Utilities: NSObject {
@@ -53,20 +52,7 @@ class Utilities: NSObject {
         if let value = response.value{
             
             if let dict = Utilities.convertToDictionary(text: value) {
-                if let isError : Bool =  dict[Constants.RESPONSE_KEY_SUCCESS] as? Bool {
-                    if !isError{
-                        
-                        if let userData = dict[Constants.RESPONSE_KEY_DATA]{
-                            return userData
-                        }else{
-                            Utilities.showAlert(title: Constants.APP_NAME, errorMessage: dict[Constants.RESPONSE_KEY_MESSAGE] as! String, withView: view)
-                        }
-                    }else{
-                        Utilities.showErrorAlert(errorMessage: dict[Constants.RESPONSE_KEY_MESSAGE] as! String, withView: view)
-                    }
-                }else{
-                    Utilities.showErrorAlert(errorMessage: "It seems server is down, Please try again later", withView: view)
-                }
+                return dict
             }else{
                 Utilities.showErrorAlert(errorMessage: "It seems server is down, Please try again later", withView: view)
             }
@@ -88,11 +74,6 @@ class Utilities: NSObject {
         return nil
     }
     
-    public static func region(with geotification: Geotification) -> CLCircularRegion {
-        let region = CLCircularRegion(center: geotification.coordinate, radius: geotification.radius, identifier: geotification.identifier)
-        region.notifyOnEntry = true
-        return region
-    }
 
     public static func isEmailValid(email: String) -> Bool {
 
@@ -162,14 +143,6 @@ class Utilities: NSObject {
         viewCtrl!.present(alert, animated: true, completion: nil)
     }
     
-    public static func getStoryBoard()-> UIStoryboard
-    {
-        if Preferences.isArabic(){
-            return UIStoryboard.init(name: "MainAr", bundle: nil);
-        }else{
-            return UIStoryboard.init(name: "Main", bundle: nil);
-        }
-    }
 }
 
 

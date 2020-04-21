@@ -1,0 +1,12 @@
+version: "Apple Swift version 5.1.2 (swiftlang-1100.0.278 clang-1100.0.33.9)"
+options: "b47c95e08b618c149757f9346a9076a8"
+build_time: [1586509141, 800899000]
+inputs:
+  "/Users/qaziammar/Documents/Xcode/IML Malaria/IML Malaria/Models/MalariaPrediction.swift": [1586433876, 385960225]
+  "/Users/qaziammar/Documents/Xcode/IML Malaria/IML Malaria/malariaList/MalariaTableView.swift": [1586509034, 636983371]
+  "/Users/qaziammar/Documents/Xcode/IML Malaria/IML Malaria/AppDelegate.swift": [1584034664, 257978294]
+  "/Users/qaziammar/Documents/Xcode/IML Malaria/IML Malaria/Utilities.swift": [1584019029, 0]
+  "/Users/qaziammar/Documents/Xcode/IML Malaria/IML Malaria/MainController.swift": [1586509141, 427881698]
+  "/Users/qaziammar/Documents/Xcode/IML Malaria/IML Malaria/ImageModel.swift": [1586432676, 824206871]
+  "/Users/qaziammar/Documents/Xcode/IML Malaria/IML Malaria/SceneDelegate.swift": [1584034664, 278280968]
+  "/Users/qaziammar/Documents/Xcode/IML Malaria/IML Malaria/malariaList/MalariaTableViewCell.swift": [1586509008, 574760334]

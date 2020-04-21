@@ -28,3 +28,17 @@ class MalariaTableView: UIViewController {
     */
 
 }
+
+extension MalariaTableView: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 5
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! MalariaTableViewCell
+        cell.malariaImageView.image = UIImage(named: String(indexPath.row + 1))
+        return cell
+    }
+    
+    
+}

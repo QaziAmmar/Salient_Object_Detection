@@ -10,6 +10,7 @@ import UIKit
 
 class MalariaTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var malariaImageView: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

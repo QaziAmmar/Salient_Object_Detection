@@ -1,24 +1,251 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Pyq-jm-14e">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <scene sceneID="pQT-Uv-0LP">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <viewController id="uhr-GW-LNc" customClass="ViewController" customModule="IML_Malaria" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Fvp-2N-Nvj">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IML" translatesAutoresizingMaskIntoConstraints="NO" id="BoH-ei-zLe">
+                                <rect key="frame" x="57" y="113" width="300" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="S80-1v-7xD"/>
+                                    <constraint firstAttribute="width" constant="300" id="skK-g0-UdU"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="69z-fm-Sd7">
+                                <rect key="frame" x="31" y="408" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="Dcu-L0-7o4"/>
+                                    <constraint firstAttribute="width" constant="80" id="bEu-Sf-8be"/>
+                                </constraints>
+                                <state key="normal" title="Test Model"/>
+                                <connections>
+                                    <segue destination="Aeo-SN-GAz" kind="show" id="mVA-rP-Z7R"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This model is trained on Red Blood cells at 1000x and classify cells as 'Healty' and 'Malaria'." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uTm-dz-DLF">
+                                <rect key="frame" x="119" y="417.5" width="269.5" height="61"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="BoH-ei-zLe" firstAttribute="top" secondItem="c4S-Xg-ki0" secondAttribute="top" constant="25" id="1p3-d4-UVk"/>
+                            <constraint firstItem="BoH-ei-zLe" firstAttribute="centerX" secondItem="c4S-Xg-ki0" secondAttribute="centerX" id="H6I-RX-nTh"/>
+                            <constraint firstItem="uTm-dz-DLF" firstAttribute="centerY" secondItem="69z-fm-Sd7" secondAttribute="centerY" id="M5q-Ai-1za"/>
+                            <constraint firstItem="69z-fm-Sd7" firstAttribute="centerY" secondItem="Fvp-2N-Nvj" secondAttribute="centerY" id="cpY-Sf-1hu"/>
+                            <constraint firstItem="69z-fm-Sd7" firstAttribute="leading" secondItem="c4S-Xg-ki0" secondAttribute="leading" constant="31" id="lmW-hH-CyA"/>
+                            <constraint firstItem="c4S-Xg-ki0" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="uTm-dz-DLF" secondAttribute="trailing" constant="20" id="n9O-0s-oOO"/>
+                            <constraint firstItem="uTm-dz-DLF" firstAttribute="leading" secondItem="69z-fm-Sd7" secondAttribute="trailing" constant="8" symbolic="YES" id="xpU-xr-KfR"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="c4S-Xg-ki0"/>
                     </view>
+                    <navigationItem key="navigationItem" id="VeD-9l-hQD"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wvs-Zl-Sab" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="101.78571428571428"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Wgk-93-86p">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Pyq-jm-14e" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="1sm-2x-MO4">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="uhr-GW-LNc" kind="relationship" relationship="rootViewController" id="uSy-r1-Dbt"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XBG-Iu-0GI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="101.78571428571428"/>
+        </scene>
+        <!--Main Controller-->
+        <scene sceneID="Uml-An-S0e">
+            <objects>
+                <viewController id="Aeo-SN-GAz" customClass="MainController" customModule="IML_Malaria" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="74k-DO-ckP">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="cy8-YI-Uy3">
+                                <rect key="frame" x="0.0" y="88" width="414" height="400"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="400" id="bc1-ly-QdN"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="flp-bu-GIP">
+                                <rect key="frame" x="0.0" y="88" width="414" height="400"/>
+                                <connections>
+                                    <action selector="camBtnPressedWith_btn:" destination="Aeo-SN-GAz" eventType="touchUpInside" id="2rQ-zy-ObO"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="XVg-eV-jah">
+                                <rect key="frame" x="8" y="488" width="398" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wCT-Ao-Tjv">
+                                        <rect key="frame" x="0.0" y="0.0" width="89" height="30"/>
+                                        <state key="normal" title="Select Image"/>
+                                        <connections>
+                                            <action selector="camBtnPressedWith_btn:" destination="Aeo-SN-GAz" eventType="touchUpInside" id="mJT-PC-yMs"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DC2-5c-OWv">
+                                        <rect key="frame" x="99.5" y="0.0" width="72" height="30"/>
+                                        <state key="normal" title="Count Cell"/>
+                                        <connections>
+                                            <action selector="countCellBtn:" destination="Aeo-SN-GAz" eventType="touchUpInside" id="rYA-xZ-vwP"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dzJ-5X-jbA">
+                                        <rect key="frame" x="181.5" y="0.0" width="98" height="30"/>
+                                        <state key="normal" title="Check Malaria"/>
+                                        <connections>
+                                            <action selector="CheckSingleCell:" destination="Aeo-SN-GAz" eventType="touchUpInside" id="n1n-sF-wBP"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uSF-l4-MVs">
+                                        <rect key="frame" x="290" y="0.0" width="108" height="30"/>
+                                        <state key="normal" title="Analyze Malaria"/>
+                                        <connections>
+                                            <segue destination="PKc-Ff-4ft" kind="show" id="sEb-uc-6aV"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cell Count: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dd3-GJ-c0u">
+                                <rect key="frame" x="20" y="568" width="89" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uh1-25-Iee">
+                                <rect key="frame" x="117" y="568" width="4.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="cy8-YI-Uy3" firstAttribute="leading" secondItem="w1r-Et-5pD" secondAttribute="leading" id="7Ta-Ua-RUG"/>
+                            <constraint firstItem="w1r-Et-5pD" firstAttribute="trailing" secondItem="cy8-YI-Uy3" secondAttribute="trailing" id="9kT-Bq-c4F"/>
+                            <constraint firstItem="w1r-Et-5pD" firstAttribute="trailing" secondItem="XVg-eV-jah" secondAttribute="trailing" constant="8" id="Bp5-ge-y9F"/>
+                            <constraint firstItem="dd3-GJ-c0u" firstAttribute="leading" secondItem="w1r-Et-5pD" secondAttribute="leading" constant="20" id="I2A-PI-FTP"/>
+                            <constraint firstItem="XVg-eV-jah" firstAttribute="top" secondItem="cy8-YI-Uy3" secondAttribute="bottom" id="LIP-CC-PEO"/>
+                            <constraint firstItem="flp-bu-GIP" firstAttribute="leading" secondItem="cy8-YI-Uy3" secondAttribute="leading" id="OlK-me-uSr"/>
+                            <constraint firstItem="flp-bu-GIP" firstAttribute="trailing" secondItem="cy8-YI-Uy3" secondAttribute="trailing" id="QSX-Fi-xcP"/>
+                            <constraint firstItem="XVg-eV-jah" firstAttribute="leading" secondItem="w1r-Et-5pD" secondAttribute="leading" constant="8" id="RtE-hd-Hrn"/>
+                            <constraint firstItem="uh1-25-Iee" firstAttribute="leading" secondItem="dd3-GJ-c0u" secondAttribute="trailing" constant="8" id="VkD-tJ-why"/>
+                            <constraint firstItem="flp-bu-GIP" firstAttribute="top" secondItem="cy8-YI-Uy3" secondAttribute="top" id="XRM-Da-EVv"/>
+                            <constraint firstItem="flp-bu-GIP" firstAttribute="centerX" secondItem="cy8-YI-Uy3" secondAttribute="centerX" id="Xeq-jy-eEo"/>
+                            <constraint firstItem="flp-bu-GIP" firstAttribute="bottom" secondItem="cy8-YI-Uy3" secondAttribute="bottom" id="kPS-HF-sFr"/>
+                            <constraint firstItem="flp-bu-GIP" firstAttribute="centerY" secondItem="cy8-YI-Uy3" secondAttribute="centerY" id="lR2-lu-BH6"/>
+                            <constraint firstItem="XVg-eV-jah" firstAttribute="centerX" secondItem="74k-DO-ckP" secondAttribute="centerX" id="oOP-Fu-yXD"/>
+                            <constraint firstItem="uh1-25-Iee" firstAttribute="centerY" secondItem="dd3-GJ-c0u" secondAttribute="centerY" id="qHa-qO-b28"/>
+                            <constraint firstItem="cy8-YI-Uy3" firstAttribute="top" secondItem="w1r-Et-5pD" secondAttribute="top" id="zI2-mz-jaQ"/>
+                            <constraint firstItem="dd3-GJ-c0u" firstAttribute="top" secondItem="XVg-eV-jah" secondAttribute="bottom" constant="50" id="zPw-m4-uhC"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="w1r-Et-5pD"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Fkg-P3-YIn"/>
+                    <connections>
+                        <outlet property="cellCount" destination="uh1-25-Iee" id="M7E-Z4-1OR"/>
+                        <outlet property="cellCountLbl" destination="dd3-GJ-c0u" id="eGw-tz-ZKO"/>
+                        <outlet property="userDp" destination="cy8-YI-Uy3" id="Gtm-3z-mvE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aJZ-Op-4OH" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1918.840579710145" y="101.78571428571428"/>
+        </scene>
+        <!--Malaria Table View-->
+        <scene sceneID="yEs-Px-GPU">
+            <objects>
+                <viewController id="PKc-Ff-4ft" customClass="MalariaTableView" customModule="IML_Malaria" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Cik-yc-XSA">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Es9-LC-E6h">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="144" id="tky-Tt-bWT" customClass="MalariaTableViewCell" customModule="IML_Malaria" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="144"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="tky-Tt-bWT" id="6YO-LF-iSA">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="144"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="5MH-aT-mXt">
+                                                    <rect key="frame" x="266" y="8" width="128" height="128"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="128" id="FfY-c0-wvt"/>
+                                                        <constraint firstAttribute="width" constant="128" id="oIF-1p-8Ok"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Malaria Cell" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uXM-s3-Urg">
+                                                    <rect key="frame" x="33" y="61.5" width="89" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="5MH-aT-mXt" secondAttribute="trailing" constant="20" id="36c-tk-nru"/>
+                                                <constraint firstItem="uXM-s3-Urg" firstAttribute="leading" secondItem="6YO-LF-iSA" secondAttribute="leadingMargin" constant="13" id="JdT-f3-i6Y"/>
+                                                <constraint firstItem="uXM-s3-Urg" firstAttribute="centerY" secondItem="6YO-LF-iSA" secondAttribute="centerY" id="khF-aP-Dmt"/>
+                                                <constraint firstAttribute="bottom" secondItem="5MH-aT-mXt" secondAttribute="bottom" constant="8" id="nnS-qZ-U6C"/>
+                                                <constraint firstItem="5MH-aT-mXt" firstAttribute="top" secondItem="6YO-LF-iSA" secondAttribute="top" constant="8" id="uHz-cB-bMN"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="malariaImageView" destination="5MH-aT-mXt" id="d1D-Vs-yKP"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="PKc-Ff-4ft" id="DzL-vA-VUV"/>
+                                    <outlet property="delegate" destination="PKc-Ff-4ft" id="tOr-r2-xI5"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="zWd-mn-6kD" firstAttribute="trailing" secondItem="Es9-LC-E6h" secondAttribute="trailing" id="23l-cS-P84"/>
+                            <constraint firstItem="zWd-mn-6kD" firstAttribute="bottom" secondItem="Es9-LC-E6h" secondAttribute="bottom" id="UaZ-Cz-lpO"/>
+                            <constraint firstItem="Es9-LC-E6h" firstAttribute="leading" secondItem="zWd-mn-6kD" secondAttribute="leading" id="gc6-0u-mCe"/>
+                            <constraint firstItem="Es9-LC-E6h" firstAttribute="top" secondItem="zWd-mn-6kD" secondAttribute="top" id="h00-N2-oGM"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="zWd-mn-6kD"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="oDc-cU-HhF"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="I9R-bY-qTb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2818.840579710145" y="100.44642857142857"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="1" width="130" height="133"/>
+        <image name="IML" width="600" height="357.5"/>
+        <image name="placeholder" width="100" height="100"/>
+    </resources>
 </document>
