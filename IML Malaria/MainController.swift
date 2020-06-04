@@ -113,7 +113,7 @@ extension MainController {
     
     func checkMalaria()  {
         MBProgressHUD.showAdded(to: self.view, animated: true)
-        let url = "http://192.168.1.4:8000/api/check_malaria/"
+        let url = "http://192.168.1.5:8000/api/check_malaria/"
         
         do{
             Alamofire.upload(multipartFormData: { (multipartFormData) in
@@ -158,7 +158,7 @@ extension MainController {
     func countCells() {
         
         MBProgressHUD.showAdded(to: self.view, animated: true)
-        let url = "http://192.168.1.4:8000/api/test/"
+        let url = "http://192.168.1.5:8000/api/test/"
         
         do{
             Alamofire.upload(multipartFormData: { (multipartFormData) in
